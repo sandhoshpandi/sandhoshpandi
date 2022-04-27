@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\Mymedecine\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2529307654.index
+2120472797.index
+2231176181.index
+3696343082.index
+63688630.index
+3793595992.index

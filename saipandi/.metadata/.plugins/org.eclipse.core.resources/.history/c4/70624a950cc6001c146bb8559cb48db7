@@ -1,0 +1,24 @@
+package com.medeil.demo;
+
+import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
+
+import org.springframework.http.HttpMethod;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import org.testng.annotations.Test;
+
+import com.mysql.fabric.Response;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.specification.RequestSpecification;
+public class API {
+	@Test
+    void getApi() {
+	 HttpMethod httpMethod = null;
+	    RestAssured.baseURI="http://194.233.67.28:7050/mymedeilboot/api/getproductdata";
+	    RequestSpecification httpRequest=RestAssured.given();
+	    io.restassured.response.Response response=httpRequest.request(Method.GET,"/291");
+	    String responsebody=response.getBody().asString();
+	    System.out.println(responsebody);
+	}
+	}

@@ -1,0 +1,18 @@
+package com.medeil.demo;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
+import org.springframework.http.HttpMethod;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import org.testng.annotations.Test;
+
+public class API {
+	@Test
+    void getApi() {
+	 HttpMethod httpMethod = null;
+	 char[] MockHttpServletRequestBuilder = null;
+		MockHttpServletRequestBuilder s=request(httpMethod.OPTIONS, "http://194.233.67.28:7050/mymedeilboot/api/getproductdata//291");
+		System.out.println(MockHttpServletRequestBuilder);
+    }
+}

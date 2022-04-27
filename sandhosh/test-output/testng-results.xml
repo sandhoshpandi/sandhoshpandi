@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="medeil" duration-ms="177324" started-at="2022-04-02T13:58:02 IST" finished-at="2022-04-02T14:00:59 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="177324" started-at="2022-04-02T13:58:02 IST" finished-at="2022-04-02T14:00:59 IST">
+      <class name="customer.CustomerRegister">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:customer.CustomerRegister@43bd930a]" name="setUp" is-config="true" duration-ms="14694" started-at="2022-04-02T13:57:47 IST" finished-at="2022-04-02T13:58:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginPage(java.lang.String,java.lang.String)[pri:0, instance:customer.CustomerRegister@43bd930a]" name="loginPage" duration-ms="20860" started-at="2022-04-02T13:58:02 IST" data-provider="getTestData1" finished-at="2022-04-02T13:58:23 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[venkateshtitaniumhq@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Medeil]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method status="PASS" signature="addEmployee()[pri:1, instance:customer.CustomerRegister@43bd930a]" name="addEmployee" duration-ms="62098" started-at="2022-04-02T13:58:23 IST" finished-at="2022-04-02T13:59:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method status="PASS" signature="customerRegister(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:customer.CustomerRegister@43bd930a]" name="customerRegister" duration-ms="47061" started-at="2022-04-02T13:59:25 IST" data-provider="getTestData" finished-at="2022-04-02T14:00:13 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[pandi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[santhosh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[28/41/99]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[6.46564654E8]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Outpatient]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[saidapet]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[saidapet]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[555555.0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Tamilnadu]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[7.010911215E9]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[santhosh@gmail.com]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[18518.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerRegister -->
+        <test-method status="PASS" signature="customerRegister(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:customer.CustomerRegister@43bd930a]" name="customerRegister" duration-ms="46469" started-at="2022-04-02T14:00:13 IST" data-provider="getTestData" finished-at="2022-04-02T14:00:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[santhos]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[m]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[30/01/98]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5456456.0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[General]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Inpatient]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[sdsad]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[6465.0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[6.8468464E7]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Tamilnadu]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Dindigul]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2.5948947E8]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[santhos@gmail.com]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[2.5198514E7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerRegister -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:customer.CustomerRegister@43bd930a]" name="tearDown" is-config="true" duration-ms="2070" started-at="2022-04-02T14:00:59 IST" finished-at="2022-04-02T14:01:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- customer.CustomerRegister -->
+    </test> <!-- Test -->
+  </suite> <!-- medeil -->
+</testng-results>

@@ -1,0 +1,905 @@
+!SESSION 2022-03-26 11:30:21.488 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-26 11:32:49.018
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-26 11:32:49.018
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@563bd6a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3549c070,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2022-03-26 11:32:51.498
+!MESSAGE org.eclipse.jdt.junit.ResultView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2022-03-26 11:32:51.498
+!MESSAGE org.springframework.ide.eclipse.aop.ui.navigator.aopReferenceModelNavigator: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.ui 2 2 2022-03-26 11:32:51.499
+!MESSAGE org.eclipse.contribution.xref.ui.views.XReferenceView: Deprecated relationship "fast" should be converted to "stack".
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-26 11:33:10.027
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2022-03-26 11:36:22.739
+!MESSAGE Execution exception for: ParameterizedCommand(Command(org.eclipse.ui.edit.paste,Paste,
+		Paste from the clipboard,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d48f1c,
+		,,true),null) in 
+	context chain: WorkbenchContext -> TrimmedWindowImpl (IDEWindow) Context -> PerspectiveImpl (com.springsource.sts.ide.perspective) Context -> PartImpl (org.springframework.ide.eclipse.ui.navigator.springExplorer) Context
+!STACK 0
+org.eclipse.core.commands.ExecutionException: Error executing 'org.eclipse.ui.edit.paste': java.lang.ClassCastException: org.springframework.ide.eclipse.ui.navigator.SpringNavigator cannot be cast to org.eclipse.egit.ui.internal.repository.RepositoriesView
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:170)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:584)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:653)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:443)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.access$2(KeyBindingDispatcher.java:386)
+	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1471)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4840)
+	at org.eclipse.swt.widgets.Tree.WM_CHAR(Tree.java:5934)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4718)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5929)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4757)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3522)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.e4.core.di.InjectionException: java.lang.ClassCastException: org.springframework.ide.eclipse.ui.navigator.SpringNavigator cannot be cast to org.eclipse.egit.ui.internal.repository.RepositoriesView
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:318)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:252)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	... 45 more
+Caused by: java.lang.ClassCastException: org.springframework.ide.eclipse.ui.navigator.SpringNavigator cannot be cast to org.eclipse.egit.ui.internal.repository.RepositoriesView
+	at org.eclipse.egit.ui.internal.repository.tree.command.RepositoriesViewCommandHandler.getView(RepositoriesViewCommandHandler.java:58)
+	at org.eclipse.egit.ui.internal.repository.tree.command.CloneCommand.getView(CloneCommand.java:1)
+	at org.eclipse.egit.ui.internal.repository.tree.command.CloneCommand.execute(CloneCommand.java:60)
+	at org.eclipse.egit.ui.internal.repository.tree.command.PasteCommand.execute(PasteCommand.java:87)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 49 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-03-26 11:37:03.015
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-03-26 11:37:23.893
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-03-26 11:37:35.051
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+!SESSION 2022-03-28 19:31:46.840 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-28 19:33:06.733
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-28 19:33:06.733
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6dc5e857,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ce0f50a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-28 19:33:45.003
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-03-29 09:56:13.886 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-29 09:56:58.727
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-29 09:56:58.727
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@145f1f97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58d4fe33,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-29 09:57:39.319
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-03-30 15:38:30.855 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-30 15:39:01.205
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-30 15:39:01.205
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@337e573b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d24ab25,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-30 15:39:39.273
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-03-30 17:13:31.827 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-30 17:14:07.827
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-30 17:14:07.827
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41538150,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1360ef8d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-30 17:14:31.056
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-03-31 09:45:59.650 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-03-31 09:46:29.691
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-31 09:46:29.691
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@145f1f97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58d4fe33,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-03-31 09:46:56.166
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-03-31 11:07:09.996
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+!SESSION 2022-04-22 15:37:52.052 -----------------------------------------------
+eclipse.buildId=3.9.12.202003181024-RELEASE-e415
+java.version=1.8.0_202
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.eclipse.jface 2 0 2022-04-22 15:38:32.668
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-04-22 15:38:32.668
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6067e7c1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ab2e887,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-04-22 15:39:15.263
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-04-22 17:16:20.824
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/technology/m2e/releases/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:396)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:700)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2022-04-22 17:16:20.847
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-04-22 17:17:33.818
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10001 2022-04-22 17:17:33.818
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 2 10004 2022-04-22 17:17:33.818
+!MESSAGE "Eclipse User Storage" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2022-04-22 17:17:33.818
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Software being installed: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Software currently installed: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.818
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.jar 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.jar 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.jar 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.jar 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.jar 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.jar 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.jar 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.818
+!MESSAGE Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.jar 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.jar 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.jar 1.2.0.v20191120-1614)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Marketplace Client 1.6.3.v20171122-2010 (org.eclipse.epp.mpc.feature.group 1.6.3.v20171122-2010)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Marketplace Client 1.8.2.v20200309-0038 (org.eclipse.epp.mpc.feature.group 1.8.2.v20200309-0038)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Marketplace Client 1.9.3.v20220121-1317 (org.eclipse.epp.mpc.feature.group 1.9.3.v20220121-1317)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.group 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170428-1554,1.1.0.v20170428-1554]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.group 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170519-1728,1.1.0.v20170519-1728]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.group 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170525-1550,1.1.0.v20170525-1550]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.group 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170526-1605,1.1.0.v20170526-1605]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE From: Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.group 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.819
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.1.v20190307-0457,1.1.1.v20190307-0457]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.819
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.group 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190308-0433,1.2.0.v20190308-0433]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.820
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.group 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190921-0254,1.2.0.v20190921-0254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.820
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE From: Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.group 1.2.0.v20191120-1614)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20191120-1614,1.2.0.v20191120-1614]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.820
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE From: Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.group 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.820
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20210517-0327,1.2.0.v20210517-0327]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.820
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE From: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.821
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE From: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.springsource.sts.package.feature.group [3.9.12.202003181024-RELEASE-e415,3.9.12.202003181024-RELEASE-e415]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.821
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE From: Spring Tool Suite Package 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.package.feature.group 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.821
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.epp.mpc.feature.group 0.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-04-22 17:17:33.837
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10001 2022-04-22 17:17:33.838
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 2 10004 2022-04-22 17:17:33.838
+!MESSAGE "Eclipse User Storage" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2022-04-22 17:17:33.838
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Software being installed: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Software currently installed: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.jar 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.jar 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.jar 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.jar 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.jar 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.jar 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.jar 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.jar 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.jar 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.jar 1.2.0.v20191120-1614)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Marketplace Client 1.6.3.v20171122-2010 (org.eclipse.epp.mpc.feature.group 1.6.3.v20171122-2010)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Marketplace Client 1.8.2.v20200309-0038 (org.eclipse.epp.mpc.feature.group 1.8.2.v20200309-0038)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Marketplace Client 1.9.3.v20220121-1317 (org.eclipse.epp.mpc.feature.group 1.9.3.v20220121-1317)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.group 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170428-1554,1.1.0.v20170428-1554]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.group 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170519-1728,1.1.0.v20170519-1728]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.group 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170525-1550,1.1.0.v20170525-1550]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.group 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170526-1605,1.1.0.v20170526-1605]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.group 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.1.v20190307-0457,1.1.1.v20190307-0457]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.group 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190308-0433,1.2.0.v20190308-0433]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.group 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190921-0254,1.2.0.v20190921-0254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.838
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE From: Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.group 1.2.0.v20191120-1614)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.838
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20191120-1614,1.2.0.v20191120-1614]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.839
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE From: Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.group 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20210517-0327,1.2.0.v20210517-0327]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.839
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE From: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.839
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE From: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.springsource.sts.package.feature.group [3.9.12.202003181024-RELEASE-e415,3.9.12.202003181024-RELEASE-e415]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.839
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE From: Spring Tool Suite Package 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.package.feature.group 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.839
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.epp.mpc.feature.group 0.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-04-22 17:17:33.857
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10001 2022-04-22 17:17:33.857
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 2 10004 2022-04-22 17:17:33.857
+!MESSAGE "Eclipse User Storage" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2022-04-22 17:17:33.857
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Software being installed: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Software currently installed: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.jar 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.jar 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.jar 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.jar 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.jar 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.jar 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.jar 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.jar 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.jar 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.jar 1.2.0.v20191120-1614)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Marketplace Client 1.6.3.v20171122-2010 (org.eclipse.epp.mpc.feature.group 1.6.3.v20171122-2010)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Marketplace Client 1.8.2.v20200309-0038 (org.eclipse.epp.mpc.feature.group 1.8.2.v20200309-0038)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Marketplace Client 1.9.3.v20220121-1317 (org.eclipse.epp.mpc.feature.group 1.9.3.v20220121-1317)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.group 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170428-1554,1.1.0.v20170428-1554]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.857
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.857
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.group 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170519-1728,1.1.0.v20170519-1728]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.group 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170525-1550,1.1.0.v20170525-1550]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.group 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170526-1605,1.1.0.v20170526-1605]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.group 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.1.v20190307-0457,1.1.1.v20190307-0457]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.group 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190308-0433,1.2.0.v20190308-0433]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.group 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190921-0254,1.2.0.v20190921-0254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.group 1.2.0.v20191120-1614)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20191120-1614,1.2.0.v20191120-1614]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.group 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20210517-0327,1.2.0.v20210517-0327]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.springsource.sts.package.feature.group [3.9.12.202003181024-RELEASE-e415,3.9.12.202003181024-RELEASE-e415]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.858
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE From: Spring Tool Suite Package 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.package.feature.group 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.858
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.epp.mpc.feature.group 0.0.0
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-04-22 17:17:33.859
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 2 10001 2022-04-22 17:17:33.859
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 2 10004 2022-04-22 17:17:33.860
+!MESSAGE "Eclipse User Storage" will be ignored because a newer version is already installed. 
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2022-04-22 17:17:33.860
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Software being installed: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Software currently installed: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.jar 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.jar 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.jar 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.jar 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.jar 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.jar 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.jar 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.jar 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.jar 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.jar 1.2.0.v20191120-1614)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Marketplace Client 1.6.3.v20171122-2010 (org.eclipse.epp.mpc.feature.group 1.6.3.v20171122-2010)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Marketplace Client 1.8.2.v20200309-0038 (org.eclipse.epp.mpc.feature.group 1.8.2.v20200309-0038)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Marketplace Client 1.9.3.v20220121-1317 (org.eclipse.epp.mpc.feature.group 1.9.3.v20220121-1317)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.1.0,2.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.0.1.v20170201-1648 (org.eclipse.userstorage.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170428-1554 (org.eclipse.userstorage.feature.group 1.1.0.v20170428-1554)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170428-1554,1.1.0.v20170428-1554]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170519-1728 (org.eclipse.userstorage.feature.group 1.1.0.v20170519-1728)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170519-1728,1.1.0.v20170519-1728]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170525-1550 (org.eclipse.userstorage.feature.group 1.1.0.v20170525-1550)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170525-1550,1.1.0.v20170525-1550]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.1.0.v20170526-1605 (org.eclipse.userstorage.feature.group 1.1.0.v20170526-1605)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.0.v20170526-1605,1.1.0.v20170526-1605]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.1.1.v20190307-0457 (org.eclipse.userstorage.feature.group 1.1.1.v20190307-0457)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.1.1.v20190307-0457,1.1.1.v20190307-0457]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190308-0433 (org.eclipse.userstorage.feature.group 1.2.0.v20190308-0433)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190308-0433,1.2.0.v20190308-0433]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.860
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE From: Eclipse User Storage 1.2.0.v20190921-0254 (org.eclipse.userstorage.feature.group 1.2.0.v20190921-0254)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.860
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20190921-0254,1.2.0.v20190921-0254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.861
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE From: Eclipse User Storage 1.2.0.v20191120-1614 (org.eclipse.userstorage.feature.group 1.2.0.v20191120-1614)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20191120-1614,1.2.0.v20191120-1614]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.861
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE From: Eclipse User Storage 1.2.0.v20210517-0327 (org.eclipse.userstorage.feature.group 1.2.0.v20210517-0327)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.jar [1.2.0.v20210517-0327,1.2.0.v20210517-0327]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.861
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE From: Eclipse User Storage SDK 1.0.1.v20170201-1648 (org.eclipse.userstorage.sdk.feature.group 1.0.1.v20170201-1648)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.userstorage.feature.group [1.0.1.v20170201-1648,1.0.1.v20170201-1648]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.861
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE From: Spring Tool Suite 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.ide 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.springsource.sts.package.feature.group [3.9.12.202003181024-RELEASE-e415,3.9.12.202003181024-RELEASE-e415]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2022-04-22 17:17:33.861
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE From: Spring Tool Suite Package 3.9.12.202003181024-RELEASE-e415 (org.springsource.sts.package.feature.group 3.9.12.202003181024-RELEASE-e415)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2022-04-22 17:17:33.861
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.epp.mpc.feature.group 0.0.0
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-04-22 17:18:13.464
+!MESSAGE An internal error occurred during: "Computing size".
+!STACK 0
+java.lang.IllegalStateException: Profile DefaultProfile is not current. Expected timestamp 1641883160104 but was 1641883160104.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.lockProfile(SimpleProfileRegistry.java:861)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:72)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.internal.p2.ui.ProvUI.getSize(ProvUI.java:256)
+	at org.eclipse.equinox.internal.p2.ui.dialogs.SizeComputingWizardPage$1.run(SizeComputingWizardPage.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-04-22 17:18:28.370
+!MESSAGE An internal error occurred during: "Installing Software".
+!STACK 0
+java.lang.IllegalStateException: Profile DefaultProfile is not current. Expected timestamp 1650625838909 but was 1641883160104.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.lockProfile(SimpleProfileRegistry.java:861)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:72)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:181)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:76)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:190)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=E\:\\Medeilplus\\medeilpluscloud-boot\\.git;E\:\\Medeilplus\\medeilpluscloud-auth\\.git;E\:\\Medeilplus\\medeilpluscloud-payment\\.git;E\:\\Medeilplus\\medeilpluscloud-crm\\.git;
+GitRepositoriesView.GitDirectories.relative=medeilpluscloud-boot\\.git;medeilpluscloud-auth\\.git;medeilpluscloud-payment\\.git;medeilpluscloud-crm\\.git;
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1
